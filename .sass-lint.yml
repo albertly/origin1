@@ -1,0 +1,5 @@
+rules:
+identation:
+	- 2
+	-
+		size: 4
