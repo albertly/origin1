@@ -2,4 +2,4 @@ rules:
 identation:
 	- 2
 	-
-		size:  4
+		size:  8
