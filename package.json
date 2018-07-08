@@ -3,7 +3,16 @@
   "version": "1.0.0",
   "description": "Getting started with React Project",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "npm run clean && npm run webpack && concurrently \"npm run webpack:w\" \"npm run web\" \"npm run rest\"",
+    "postinstall": "npm run typings",
+    "typings": "typings install",
+    "clean": "rimraf dist",
+    "web": "webpack-dev-server",
+    "rest": "json-server --watch --port 3010 db.json",
+    "webpack:w": "webpack --watch",
+    "webpack": "webpack --log-level=debug"
+  },
   "keywords": [
     "react",
     "typescript"
